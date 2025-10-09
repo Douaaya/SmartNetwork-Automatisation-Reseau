@@ -1,0 +1,242 @@
+{
+  "questions": [
+    {
+      "question": "Défaut duplex Cisco",
+      "answer": "`show interfaces status`\nChanger mode : `duplex full` ou `duplex auto` sur l’interface",
+      "keywords": ["duplex", "vitesse", "collision"],
+      "variantes": ["Configurer duplex", "Mode duplex Cisco", "Full duplex Cisco"]
+    },
+    {
+      "question": "Configurer SNMP Cisco",
+      "answer": "`snmp-server community public RO`\n`snmp-server location Salle Serveurs`\n`snmp-server contact admin@example.com`",
+      "keywords": ["snmp", "supervision", "monitoring"],
+      "variantes": ["Activer SNMP", "Configurer SNMP Cisco", "SNMP routeur"]
+    },
+    {
+      "question": "Configurer console Cisco",
+      "answer": "`line console 0`\n`password cisco`\n`login`",
+      "keywords": ["console", "mot de passe", "accès physique"],
+      "variantes": ["Accès console", "Sécuriser console", "Console routeur"]
+    },
+    {
+      "question": "Configurer mot de passe enable",
+      "answer": "`enable secret cisco` (chiffré)\n`enable password cisco` (non chiffré, déconseillé)",
+      "keywords": ["enable", "mot de passe", "secret"],
+      "variantes": ["Mot de passe admin", "Enable secret", "Accès privilégié"]
+    },
+    {
+      "question": "Afficher version IOS",
+      "answer": "`show version`\nAffiche la version IOS, le temps de fonctionnement et d'autres infos système.",
+      "keywords": ["version", "ios", "système"],
+      "variantes": ["Vérifier version IOS", "Show version Cisco", "Version système"]
+    },
+    {
+      "question": "Effacer configuration Cisco",
+      "answer": "`write erase`\nPuis `reload` pour redémarrer sans config",
+      "keywords": ["reset", "effacer", "réinitialiser"],
+      "variantes": ["Reset routeur", "Effacer config", "Initialiser switch"]
+    },
+    {
+      "question": "Configurer bannière Cisco",
+      "answer": "`banner motd #Message interdit aux non-autorisés#`",
+      "keywords": ["bannière", "motd", "message accueil"],
+      "variantes": ["Message bannière", "Configurer MOTD", "Message routeur"]
+    },
+    {
+      "question": "Configurer login local VTY",
+      "answer": "`username admin secret cisco`\n`line vty 0 4`\n`login local`",
+      "keywords": ["vty", "accès distant", "utilisateur"],
+      "variantes": ["Accès VTY Cisco", "Login distant", "SSH utilisateur"]
+    },
+    {
+      "question": "Activer service web Cisco (SDM)",
+      "answer": "`ip http server`\n`ip http secure-server`\nNécessaire pour Cisco SDM (ancien GUI)",
+      "keywords": ["http", "web", "sdm"],
+      "variantes": ["Activer HTTP Cisco", "Serveur web Cisco", "GUI Cisco"]
+    },
+    {
+      "question": "Configurer horloge manuellement",
+      "answer": "`clock set 15:30:00 16 May 2025`",
+      "keywords": ["heure", "clock", "système"],
+      "variantes": ["Régler l'heure", "Clock Cisco", "Heure manuelle"]
+    },
+    {
+      "question": "Configuration VLAN Cisco",
+      "answer": "Commandes standard :\n1. Création VLAN : vlan 10\n2. Nommer : name MON_VLAN\n3. Port : interface gi0/1 > switchport mode access > switchport access vlan 10",
+      "keywords": ["vlan", "switch", "trunk", "access"],
+      "variantes": ["Créer un VLAN", "Commandes VLAN", "Configurer VLAN"]
+    },
+    {
+      "question": "Dépannage OSPF",
+      "answer": "Commandes :\n1. show ip ospf neighbor\n2. show ip ospf interface\n3. show ip ospf database\nVérifier les timers, le type de réseau et les zones.",
+      "keywords": ["ospf", "troubleshoot", "neighbor", "down"],
+      "variantes": ["OSPF ne marche pas", "Vérifier OSPF", "OSPF neighbor problème"]
+    },
+    {
+      "question": "Configuration NAT Cisco",
+      "answer": "NAT Statique : ip nat inside source static 192.168.1.10 203.0.113.5\nNAT Dynamique : créer pool, ACL, appliquer avec ip nat inside source list",
+      "keywords": ["nat", "translation", "public ip"],
+      "variantes": ["NAT configuration", "Configurer NAT", "NAT dynamique"]
+    },
+    {
+      "question": "ACL Cisco",
+      "answer": "Créer ACL : access-list 10 permit 192.168.1.0 0.0.0.255\nAssocier : ip access-group 10 in sur l'interface.\nAfficher : show access-lists",
+      "keywords": ["acl", "filtrage", "access list"],
+      "variantes": ["Créer ACL", "Configurer ACL", "ACL standard"]
+    },
+    {
+      "question": "Configuration DHCP Cisco",
+      "answer": "Créer pool : ip dhcp pool NOM\nConfigurer réseau, passerelle, DNS.\nExclure IP : ip dhcp excluded-address",
+      "keywords": ["dhcp", "ip dynamique", "config dhcp"],
+      "variantes": ["DHCP routeur", "Configurer DHCP", "Pool DHCP Cisco"]
+    },
+    {
+      "question": "STP Cisco",
+      "answer": "Afficher : show spanning-tree\nChanger priorité : spanning-tree vlan X priority 4096\nForcer root : spanning-tree vlan X root primary",
+      "keywords": ["stp", "boucle", "spanning-tree"],
+      "variantes": ["Eviter boucle switch", "Réseau STP", "Switch root"]
+    },
+    {
+      "question": "Trunk vs Access",
+      "answer": "Access : un VLAN / Trunk : plusieurs VLANs via balises 802.1Q.\nCommandes :\nswitchport mode access\nswitchport mode trunk",
+      "keywords": ["trunk", "access", "vlan mode"],
+      "variantes": ["Différence trunk access", "Mode trunk Cisco", "Interface trunk"]
+    },
+    {
+      "question": "HSRP Cisco",
+      "answer": "Permet redondance de passerelle.\nCommandes :\nstandby 1 ip 192.168.1.1\nstandby 1 priority 110\nstandby 1 preempt",
+      "keywords": ["hsrp", "redondance", "failover"],
+      "variantes": ["Configurer HSRP", "Gateway redondante", "HSRP Cisco"]
+    },
+    {
+      "question": "VRRP Cisco",
+      "answer": "Alternative à HSRP.\nvrrp 1 ip 192.168.1.1\nvrrp 1 priority 120\nvrrp 1 preempt",
+      "keywords": ["vrrp", "gateway", "backup"],
+      "variantes": ["Configurer VRRP", "Backup gateway Cisco", "Failover VRRP"]
+    },
+    {
+      "question": "EtherChannel Cisco",
+      "answer": "Agrégation de liens.\nModes : on, PAgP, LACP\nCommandes :\ninterface range gi0/1-2\nchannel-group 1 mode active",
+      "keywords": ["etherchannel", "lacp", "aggrégation"],
+      "variantes": ["Configurer Etherchannel", "LACP Cisco", "PAgP"]
+    },
+    {
+      "question": "Switchport Security",
+      "answer": "Sécurise ports :\nswitchport port-security\nOptions : maximum, mac-address, violation",
+      "keywords": ["port security", "mac", "switch"],
+      "variantes": ["Sécuriser un port", "Switchport sécurité", "Limite MAC Cisco"]
+    },
+    {
+      "question": "Route statique Cisco",
+      "answer": "ip route 192.168.2.0 255.255.255.0 192.168.1.1\nVérifier avec show ip route",
+      "keywords": ["route", "statique", "ip route"],
+      "variantes": ["Ajouter route statique", "Route manuelle Cisco", "Configurer route"]
+    },
+    {
+      "question": "BGP Configuration de base",
+      "answer": "1. router bgp 65001\n2. neighbor 1.1.1.2 remote-as 65002\n3. network 10.0.0.0 mask 255.255.255.0",
+      "keywords": ["bgp", "as", "neighbor"],
+      "variantes": ["Configurer BGP", "BGP cisco", "Routage BGP"]
+    },
+    {
+      "question": "EIGRP Configuration de base",
+      "answer": "router eigrp 1\nnetwork 10.0.0.0\nno auto-summary",
+      "keywords": ["eigrp", "routing", "autonomous"],
+      "variantes": ["Configurer EIGRP", "EIGRP Cisco", "Commandes EIGRP"]
+    },
+    {
+      "question": "VTP Cisco",
+      "answer": "Propage infos VLANs entre switches.\nModes : server, client, transparent\nCommandes :\nvtp domain NOM\nvtp mode server",
+      "keywords": ["vtp", "vlan propagation", "switch"],
+      "variantes": ["Configurer VTP", "Domaine VTP", "Mode VTP"]
+    },
+    {
+      "question": "Ping et traceroute Cisco",
+      "answer": "Commandes :\nping 8.8.8.8\ntraceroute 8.8.8.8\nUtiles pour vérifier la connectivité",
+      "keywords": ["ping", "traceroute", "réseau"],
+      "variantes": ["Tester connexion", "Tracer une route", "Ping routeur"]
+    },
+    {
+      "question": "TFTP Backup Cisco",
+      "answer": "Sauvegarder config :\ncopy running-config tftp:\nSuivre les instructions pour IP et nom fichier",
+      "keywords": ["tftp", "sauvegarde", "config"],
+      "variantes": ["Backup config routeur", "TFTP Cisco", "Copie configuration"]
+    },
+    {
+      "question": "Syslog Cisco",
+      "answer": "Configurer :\nlogging 192.168.1.100\nNiveaux : 0 (emergency) à 7 (debug)\nAfficher : show logging",
+      "keywords": ["syslog", "journal", "logs"],
+      "variantes": ["Envoyer logs Cisco", "Syslog server", "Configurer syslog"]
+    },
+    {
+      "question": "NTP Cisco",
+      "answer": "Synchroniser l’heure :\nntp server 192.168.1.1\nVérifier avec show ntp status",
+      "keywords": ["ntp", "heure", "temps", "sync"],
+      "variantes": ["Synchroniser horloge", "Serveur NTP", "Configurer NTP"]
+    },
+    {
+      "question": "Telnet vs SSH Cisco",
+      "answer": "Telnet = non chiffré / SSH = sécurisé.\nPréférer SSH :\nip domain-name monreseau\ncrypto key generate rsa\nusername admin password secret",
+      "keywords": ["telnet", "ssh", "sécurité"],
+      "variantes": ["Différence Telnet SSH", "Activer SSH", "Connexion sécurisée"]
+    },
+    {
+      "question": "Configurer SSH Cisco",
+      "answer": "hostname SW1\nip domain-name exemple.com\ncrypto key generate rsa\nline vty 0 4 > transport input ssh",
+      "keywords": ["ssh", "cisco", "sécurisé"],
+      "variantes": ["Connexion SSH Cisco", "Configurer accès SSH", "SSH vs Telnet"]
+    },
+    {
+      "question": "Redémarrer interface Cisco",
+      "answer": "interface gi0/1\nshutdown\nno shutdown",
+      "keywords": ["restart interface", "down", "up"],
+      "variantes": ["Relancer port", "Redémarrer interface", "Remettre en ligne port"]
+    },
+    {
+      "question": "Vérifier ARP Cisco",
+      "answer": "show ip arp\nPermet de voir la table ARP pour IP <-> MAC",
+      "keywords": ["arp", "mac", "ip"],
+      "variantes": ["Afficher ARP", "Adresse MAC IP", "Table ARP"]
+    },
+    {
+      "question": "Défaut duplex Cisco",
+      "answer": "show interfaces status\nChanger mode : duplex full ou duplex auto sur l’interface",
+      "keywords": ["duplex", "vitesse", "collision"],
+      "variantes": ["Erreur duplex", "Vérifier duplex", "Auto vs full duplex"]
+    },
+    {
+      "question": "Configurer une passerelle",
+      "answer": "Pour un switch :\nip default-gateway 192.168.1.1",
+      "keywords": ["default gateway", "routeur", "passerelle"],
+      "variantes": ["Définir gateway", "Routeur par défaut", "Configurer passerelle"]
+    },
+    {
+      "question": "Protocole CDP Cisco",
+      "answer": "show cdp neighbors\nPermet de découvrir les équipements Cisco connectés.",
+      "keywords": ["cdp", "neighbors", "topologie"],
+      "variantes": ["Afficher voisins Cisco", "Découverte Cisco", "CDP configuration"]
+    },
+    {
+      "question": "DNS sur Cisco",
+      "answer": "ip name-server 8.8.8.8\nPermet la résolution de noms DNS.",
+      "keywords": ["dns", "résolution", "nom de domaine"],
+      "variantes": ["Configurer DNS", "Serveur DNS", "Résolution de nom"]
+    },
+    {
+      "question": "Configurer mot de passe console",
+      "answer": "line console 0\npassword cisco\nlogin",
+      "keywords": ["mot de passe", "console", "accès"],
+      "variantes": ["Sécuriser console", "Mot de passe routeur", "Accès console"]
+    },
+    {
+      "question": "Effacer configuration Cisco",
+      "answer": "write erase\nreload pour redémarrer après suppression.",
+      "keywords": ["reset", "effacer config", "réinitialiser"],
+      "variantes": ["Reset usine routeur", "Supprimer configuration", "Effacer mémoire Cisco"]
+    }
+  ]
+}
+
+
+
+

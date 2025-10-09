@@ -1,0 +1,20 @@
+{
+    "questions": [
+        {
+            "question": "Comment configurer une interface sur un routeur Cisco?",
+            "reponse": "Pour configurer une interface sur un routeur Cisco, utilisez les commandes suivantes:\n\nenable\nconfigure terminal\ninterface <interface_name>\nip address <ip_address> <subnet_mask>\nno shutdown"
+        },
+        {
+            "question": "Comment sauvegarder la configuration d'un équipement Cisco?",
+            "reponse": "Pour sauvegarder la configuration, utilisez la commande:\n\nwrite memory\n\nou\n\ncopy running-config startup-config"
+        },
+        {
+            "question": "Comment vérifier la table de routage?",
+            "reponse": "Pour afficher la table de routage, utilisez la commande:\n\nshow ip route"
+        },
+        {
+            "question": "Comment configurer OSPF?",
+            "reponse": "Configuration de base d'OSPF:\n\nenable\nconfigure terminal\nrouter ospf <process_id>\nnetwork <network_address> <wildcard_mask> area <area_id>"
+        }
+    ]
+}
