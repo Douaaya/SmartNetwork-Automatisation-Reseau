@@ -1,9 +1,9 @@
 # SmartNetwork – Automatisation et gestion intelligente des équipements réseau
 
-## 🎯 Objectif
+##  Objectif
 Développer une application permettant d’automatiser la gestion, la configuration et la supervision des équipements Cisco sur le site OCP Jorf Lasfar.
 
-## 🧰 Technologies utilisées
+##  Technologies utilisées
 - Python 3.11
 - Tkinter (interface graphique)
 - Netmiko (connexion SSH)
@@ -11,14 +11,14 @@ Développer une application permettant d’automatiser la gestion, la configurat
 - OpenPyXL (lecture fichiers Excel)
 - Ollama + Gemma (assistant IA locale)
 
-## ⚙️ Fonctionnalités principales
+##  Fonctionnalités principales
 - Scan automatique des équipements réseau  
 - Sauvegarde et restauration des configurations (local / SFTP)  
 - Application de commandes en masse  
 - Vérification de conformité réseau  
 - Assistant IA local pour aide au diagnostic
 
-## 🗂️ Structure du projet
+##  Structure du projet
 - gui.py # Interface principale (Tkinter)
 - backup.py # Module de sauvegarde
 - scan_reseau.py # Scan réseau avec Nmap
@@ -26,11 +26,7 @@ Développer une application permettant d’automatiser la gestion, la configurat
 - verification.py # Vérification de conformité
 
 
-## 📈 Résultats
+##  Résultats
 - Réduction du temps de configuration : **–80 %**
 - Diminution des erreurs humaines
 - Meilleure traçabilité des actions réseau
-
-## 👩‍💻 Auteur
-**YAICHE Douaa**  
-Projet de Fin d’Études – ENSA Safi / OCP Jorf Lasfar (2024–2025)
